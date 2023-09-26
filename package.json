@@ -19,5 +19,6 @@
   "license": "ISC",
   "devDependencies": {
     "prisma": "^5.3.1"
-  }
+  },
+  "keywords": []
 }

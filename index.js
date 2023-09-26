@@ -1,7 +1,7 @@
 import express from "express";
 import router from "./src/routes/router.js";
 import "dotenv/config";
-import utils from "./src/utils.js";
+import utils from "./config/enviromentValidator.js";
 import bodyParser from 'body-parser';
 
 const app = express();

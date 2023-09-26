@@ -1,5 +1,5 @@
 import jwt from 'jsonwebtoken';
-import utils from "../utils.js";
+import utils from "../../config/enviromentValidator.js";
 
 function verifyToken(req, res, next) {
   const token = req.headers.authorization;
@@ -8,7 +8,7 @@ function verifyToken(req, res, next) {
     return res.status(403).json({ error: 'Token nulo' });
   }
 
-  jwt.verify(token, utils.validateSecretKey, (err, decodedToken) => {
+  jwt.verify(token, utils.validateSecretKey(), (err, decodedToken) => {
     if (err) {
       return res.status(401).json({ error: 'Token no válido' });
     }
